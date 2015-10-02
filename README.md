@@ -3,23 +3,16 @@ Test interceptors not working in weld-2.2.16.SP1 and apache-tomcat-8.0.26
 
   @Inherited
   @InterceptorBinding
-@Retention(RetentionPolicy.RUNTIME)
-@Target({ ElementType.METHOD, ElementType.TYPE })
-public @interface Logged {}
+  @Retention(RetentionPolicy.RUNTIME)
+  @Target({ ElementType.METHOD, ElementType.TYPE })
+  public @interface Logged {}
 
 @Logged
 @Interceptor
 public class LoggedInterceptor implements Serializable {
-	private static final long serialVersionUID = 1L;
-	
-	public static AtomicInteger logMethodEntryCount = new AtomicInteger(0);
-
-	@AroundInvoke
+    @AroundInvoke
     public Object logMethodEntry(InvocationContext invocationContext) throws Exception {
-        System.out.println("Entering method: " 
-                + invocationContext.getMethod().getName() + " in class "
-                + invocationContext.getMethod().getDeclaringClass().getName());
-        logMethodEntryCount.incrementAndGet();
+        System.out.println("Entering LoggedInterceptor"); // FIXME: NEVER GOES HERE!!!
         return invocationContext.proceed();
     }
 }
