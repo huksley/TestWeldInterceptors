@@ -1,11 +1,12 @@
 # TestWeldInterceptors
 Test interceptors not working in weld-2.2.16.SP1 and apache-tomcat-8.0.26
 
-  @Inherited
-  @InterceptorBinding
-  @Retention(RetentionPolicy.RUNTIME)
-  @Target({ ElementType.METHOD, ElementType.TYPE })
-  public @interface Logged {}
+```
+@Inherited
+@InterceptorBinding
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ ElementType.METHOD, ElementType.TYPE })
+public @interface Logged {}
 
 @Logged
 @Interceptor
@@ -25,3 +26,4 @@ public class TestFilterInject implements Filter {
 		chain.doFilter(request, response);
 	}
 </code>
+```
