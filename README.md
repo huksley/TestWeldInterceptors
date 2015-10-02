@@ -1,6 +1,11 @@
 # TestWeldInterceptors
 
-Test interceptors not working in weld-2.2.16.SP1 and apache-tomcat-8.0.26
+Test interceptors not working in following setup:
+
+  * weld-2.2.16.SP1
+  * apache-tomcat-8.0.26
+  * jdk1.7.0_79_x64
+  * Windows 7
 
 @WebFilter and @WebServlet methods is not intercepted in such configuration. 
 
