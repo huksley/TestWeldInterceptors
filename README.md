@@ -85,4 +85,5 @@ All tomcat log:
 02-Oct-2015 10:53:40.514 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
 02-Oct-2015 10:53:40.520 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
 02-Oct-2015 10:53:40.522 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 2041 ms
+Entering filter
 ```
