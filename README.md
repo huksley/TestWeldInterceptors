@@ -30,5 +30,4 @@ public class TestFilterInject implements Filter {
 		chain.doFilter(request, response);
 	}
 }
-</code>
 ```
