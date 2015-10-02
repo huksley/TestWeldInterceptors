@@ -1,8 +1,8 @@
 # TestWeldInterceptors
 
-Test interceptors not working in following setup:
+Interceptor in filter and servlet not working in following setup:
 
-  * weld-2.2.16.SP1
+  * weld-2.2.16.SP1 OR 2.3.0.Final
   * apache-tomcat-8.0.26
   * jdk1.7.0_79_x64
   * Windows 7
